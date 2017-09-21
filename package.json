@@ -1,0 +1,35 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "it aims to ease tasks for font-end developers",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "boilerplate",
+    "seed",
+    "starter-kit",
+    "devtips",
+    "sass",
+    "pug",
+    "gulp"
+  ],
+  "author": "syed shihab",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-minify-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest"
+  }
+}
