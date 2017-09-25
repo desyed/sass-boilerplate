@@ -213,6 +213,12 @@ gulp.task('rander-view', function () {
         .pipe(gulp.dest('app'))
         .pipe(browserSync.reload({stream:true}));
 });
+/* html from src to app */
+
+gulp.task('favicon', function () {
+    return gulp.src('favicon.ico')
+        .pipe(gulp.dest('app'))
+});
 
 
 /* Reload task */
@@ -236,11 +242,11 @@ gulp.task('browser-sync', function() {
 });
 
 /* Watch scss, js and html files, doing different things with each. */
-gulp.task('default', ['sass', 'scripts','minify-custom','rander-view', 'browser-sync', 'merge-styles','images'], function () {
+gulp.task('default', ['sass', 'scripts','minify-custom','rander-view', 'browser-sync', 'merge-styles','images','favicon'], function () {
     /* Watch scss, run the sass task on change. */
-    gulp.watch(['src/scss/style.scss','src/scss/**/*.scss'], ['sass'])
+    gulp.watch(['src/scss/style.scss','src/scss/**/*.scss'], ['sass']);
     /* Watch app.js file, run the scripts task on change. */
-    gulp.watch(['src/js/custom.js'], ['minify-custom'])
+    gulp.watch(['src/js/custom.js'], ['minify-custom']);
 	gulp.watch(['src/img/*'], ['images']);
     /* Watch .html files, run the bs-reload task on change. */
     gulp.watch(['src/index.html'], ['rander-view']);
